@@ -5,7 +5,6 @@ import './Header.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function Header() {
   const [isTopFixed, setIsTopFixed] = useState(false);
@@ -26,17 +25,15 @@ function Header() {
   return (
     <Navbar collapseOnSelect expand="lg" className={`bg-body-tertiary ${isTopFixed ? 'fixed-top' : ''}`}>
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <img src="assets/logo.png" height={80} width={250} style={{margin:"0px",objectFit:"cover",objectPosition:"center center"}} alt="" />  
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-           
-          </Nav>
+           </Nav>
           <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
-            </Nav.Link>
+          <Nav.Link href="careers">Work With Us</Nav.Link>
+            <Nav.Link href="store">Go to Store</Nav.Link>
+            
           </Nav>
         </Navbar.Collapse>
       </Container>
