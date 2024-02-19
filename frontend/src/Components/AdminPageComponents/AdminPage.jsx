@@ -38,6 +38,7 @@ const formSubmitHandler = async(e) => {
     // alert('Something Went Wrong During Uploading Medicine!! ');
     console.log("Error is:",error.response.data.message);
     alert(error.response.data.message);
+    // alert("Kindly Provide all the informations and Correct Admin Code to Add Medicine in Store!!")
     location.reload();
   }
   
