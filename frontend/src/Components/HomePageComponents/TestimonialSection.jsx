@@ -11,7 +11,7 @@ export default function TestimonialSection() {
 
             <div className="swiper-slide">
               <div className="testimonial-item">
-                <img src="./assets/img/testimonials/testimonials-1.jpg" className="testimonial-img" alt=""/>
+                <img src="./assets/img/testimonials/testimonials_1.jpg" className="testimonial-img" alt=""/>
                 <h3>Dheeraj Singh</h3>
                 <h4>Ceo &amp; Founder</h4>
                 <p>

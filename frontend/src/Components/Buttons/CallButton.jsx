@@ -2,7 +2,7 @@ import React from 'react';
 import { Button ,Icon} from 'semantic-ui-react'
 
 const CallButton = () => {
-  const phoneNumber = '1234567890'; // Replace with your desired phone number
+  const phoneNumber = '8948584874'; // Replace with your desired phone number
 
   const handleCallButtonClick = () => {
     window.location.href = `tel:${phoneNumber}`;
