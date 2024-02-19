@@ -1,4 +1,4 @@
-# Online Medical Store
+# [MedicineForYou](https://medicineforyou.vercel.app/)
 
 Welcome to our Online Medical Store application! This application allows users to conveniently order medicines online. Additionally, it provides features for the admin to manage the inventory of medicines.
 
