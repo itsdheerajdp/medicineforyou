@@ -27,7 +27,7 @@ export default function ContactSection() {
           <div className="section-title">
             <h2>Contact</h2>
             <h3><span>Contact Us</span></h3>
-            <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+            <p>Get in Touch: Reach Out to Us for Any Inquiries or Assistance</p>
           </div>
 
           <div className="row" data-aos="fade-up" data-aos-delay="100">
@@ -35,7 +35,7 @@ export default function ContactSection() {
               <div className="info-box mb-4">
                 <i className="bx bx-map"></i>
                 <h3>Our Address</h3>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <p>1408 Narayanpuri Naubasta , Kanpur Nagar - 208021</p>
               </div>
             </div>
 
@@ -43,7 +43,7 @@ export default function ContactSection() {
               <div className="info-box mb-4">
                 <i className="bx bx-envelope"></i>
                 <h3>Email Us</h3>
-                <p>contact@example.com</p>
+                <p>singhdheeraj2696@gmail.com</p>
               </div>
             </div>
 
@@ -51,7 +51,7 @@ export default function ContactSection() {
               <div className="info-box mb-4">
                 <i className="bx bx-phone-call"></i>
                 <h3>Call Us</h3>
-                <p>+1 5589 55488 55</p>
+                <p>+91 8948584874</p>
               </div>
             </div>
           </div>

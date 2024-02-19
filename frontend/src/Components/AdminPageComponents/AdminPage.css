@@ -1,0 +1,13 @@
+
+.adminform{
+    /* padding: 12rem; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+/* background-color: aqua; */
+}
+.adminformfield{
+    width: 90%;
+}

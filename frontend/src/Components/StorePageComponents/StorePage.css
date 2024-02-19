@@ -1,0 +1,29 @@
+.storecard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.medicinecard {
+    height: 35rem;
+}
+
+.imagemedicine {
+    height: 200px;
+}
+
+.cardPrice {
+    font-size: 2rem;
+    margin-top: 5rem;
+}
+
+.priceSpan {
+    color: red;
+}
+
+.medicinecardimage {
+    width: auto;
+    height: 200px;
+    object-fit: cover;
+}
