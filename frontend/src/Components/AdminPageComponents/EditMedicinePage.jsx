@@ -23,7 +23,7 @@ export default function EditMedicinePage() {
   useEffect(()=>{
     const fetchMedicines = async()=>{
       try {
-        const medicines = await axios.get("http://localhost:8000/v1/api/getmedicines");
+        const medicines = await axios.get("https://medicineforyou-backend.vercel.app/v1/api/getmedicines");
         // console.log("Medicines got:",medicines.data.data);
         setMedicines(medicines.data.data)
       } catch (error) {
@@ -34,7 +34,7 @@ export default function EditMedicinePage() {
   },[])
   const DeleteHandler = async(currentMedicine)=>{
     try {
-       const response= await axios.post(`http://localhost:8000/v1/api/deletemedicine/${currentMedicine._id}`,{adminCode:adminCode});
+       const response= await axios.post(`https://medicineforyou-backend.vercel.app/v1/api/deletemedicine/${currentMedicine._id}`,{adminCode:adminCode});
       // console.log("Response Got:",response.data);
       // console.log("I am in try of delete and medicines got:",currentMedicine);
       alert("Medicine Deleted Successfully!!")

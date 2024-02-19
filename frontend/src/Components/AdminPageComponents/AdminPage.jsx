@@ -21,13 +21,16 @@ const formSubmitHandler = async(e) => {
   console.log("I am in try")
   const formData = new FormData();
   formData.append('name', medicineName);
+  console.log("Medicine Name is:",medicineName);
   formData.append('description', medicineDescription);
   formData.append('offer', offer);
   formData.append('price', medicinePrice);
   formData.append('image', medicineImage);
   formData.append('otp', adminCode);
+  console.log("Medicine Image is:",medicineImage)
+  console.log("Form admincode is:",adminCode)
   console.log("Form Data is:",formData)
-  const response = await axios.post('http://localhost:8000/v1/api/uploadmedicine', formData);
+  const response = await axios.post('https://medicineforyou-backend.vercel.app/v1/api/uploadmedicine',formData);
   console.log("Medicine Got:",response);
   alert('Medicine Added Successfully!!');
   location.reload();

@@ -23,7 +23,7 @@ export default function StorePage() {
   useEffect(()=>{
     const fetchMedicines = async()=>{
       try {
-        const medicines = await axios.get("http://localhost:8000/v1/api/getmedicines");
+        const medicines = await axios.get("https://medicineforyou-backend.vercel.app/v1/api/getmedicines");
         // console.log("Medicines got:",medicines.data.data);
         setMedicines(medicines.data.data)
       } catch (error) {

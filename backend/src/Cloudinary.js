@@ -1,29 +1,33 @@
 import { v2 as cloudinary } from 'cloudinary';
-import fs from "fs"; // file system
 
 cloudinary.config({
     cloud_name: "dheerajbackend",
     api_key: "994218117875869",
     api_secret: "AXBes7pm6IEcl6YXni-RT1B3ohU"
-}); // pasted from cloudinary.com
-
-
-const uploadOnCloudinary = async(localFilePath) => {
+});
+const uploadOnCloudinary = async(fileBuffer) => {
     try {
-        if (!localFilePath) return null
-            //upload the file on cloudinary
-        const response = await cloudinary.uploader.upload(localFilePath, {
+        if (!fileBuffer) return null;
+        
+        return new Promise((resolve, reject) => {
+            cloudinary.uploader.upload_stream({
                 resource_type: "auto"
-            })
-            // file has been uploaded successfull
-            //console.log("file is uploaded on cloudinary ", response.url);
-        fs.unlinkSync(localFilePath)
-        return response;
-
+            }, (error, result) => {
+                if (error) {
+                    console.error("Error uploading to Cloudinary:", error);
+                    reject(error);
+                } else {
+                    console.log("Upload successful. Cloudinary response:", result);
+                    resolve(result.secure_url); // Resolve with the secure URL of the uploaded image
+                }
+            }).end(fileBuffer);
+        });
     } catch (error) {
-        console.log("ERROR IS:", error);
-        fs.unlinkSync(localFilePath) // remove the locally saved temporary file as the upload operation got failed
+        console.log("ERROR:", error);
         return null;
     }
 }
-export { uploadOnCloudinary }
+
+
+
+export { uploadOnCloudinary };
